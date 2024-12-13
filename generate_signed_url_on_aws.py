@@ -1,6 +1,7 @@
 import boto3
 from botocore.exceptions import ClientError
 
+# 署名付きURLを生成
 def generate_presigned_url(bucket_name, object_name, access_key, secret_key, region="us-east-1", expiration=3600):
     s3_client = boto3.client(
         's3',
